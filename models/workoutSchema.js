@@ -39,7 +39,7 @@ const workoutSchema = new Schema(
                     required: "Enter the amount of sets"
                 },
     },
-);
+)
     {
         toJSON: {
             virtuals: true
