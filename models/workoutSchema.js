@@ -38,14 +38,16 @@ const workoutSchema = new Schema(
                     type: Number,
                     required: "Enter the amount of sets"
                 },
+            }
+        ]
     },
-)
+
     {
         toJSON: {
             virtuals: true
         }
     }
-
+)
 workoutSchema.virtual("totalDuration").get(function () {
     return this.exercises.reduce((total, exercise) => {
         return total + exercise.duration;
